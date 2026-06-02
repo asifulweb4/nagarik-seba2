@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import {
   Home, Menu, X, LogOut, User, Search, Bell,
-  Wallet, Settings, Clock, Send, LogIn, UserPlus, ShieldCheck
+  Wallet, Settings, Clock, Send, LogIn, UserPlus, ShieldCheck, ArrowDownToLine
 } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import type { Profile } from '@/lib/supabase'
@@ -130,6 +130,7 @@ export default function DashboardPage() {
     { href: '/dashboard/profile', icon: User, label: 'প্রোফাইল' },
     { href: '/dashboard/orders', icon: Clock, label: 'অর্ডার লিস্ট' },
     { href: '/dashboard/balance', icon: Wallet, label: 'ব্যালেন্স যোগ করুন' },
+    { href: '/dashboard/withdraw', icon: ArrowDownToLine, label: 'উইথড্র করুন' },
     { href: '/dashboard/settings', icon: Settings, label: 'সেটিংস' },
   ]
 
