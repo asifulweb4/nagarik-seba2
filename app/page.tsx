@@ -5,55 +5,55 @@ import Image from 'next/image'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { categories } from '@/lib/services'
-import { Search, Loader2 } from 'lucide-react'
+import { Search, Loader2, IdCard, CreditCard, ClipboardList, FileText, ShieldCheck, Headphones, Zap, Trophy } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 
 const coreServices = [
   {
-    icon: '🪪',
+    icon: <IdCard size={24} className="text-blue-600" />,
     title: 'NID সেবা',
     desc: 'ভোটার আইডি কার্ড তৈরি ও হারানো আইডি কার্ড ডাউনলোড করুন',
-    color: 'bg-blue-100 text-blue-600',
+    color: 'bg-blue-100',
   },
   {
-    icon: '💳',
+    icon: <CreditCard size={24} className="text-teal-600" />,
     title: 'স্মার্টকার্ড সেবা',
     desc: 'স্মার্টকার্ড ডাউনলোড এবং আপগ্রেড করতে আবেদন করুন',
-    color: 'bg-teal-100 text-teal-600',
+    color: 'bg-teal-100',
   },
   {
-    icon: '📋',
+    icon: <ClipboardList size={24} className="text-pink-600" />,
     title: 'জন্ম নিবন্ধন সেবা',
     desc: 'অনলাইনে জন্ম নিবন্ধন সনদ ডাউনলোড এবং সংশোধন করুন',
-    color: 'bg-pink-100 text-pink-600',
+    color: 'bg-pink-100',
   },
   {
-    icon: '📄',
+    icon: <FileText size={24} className="text-green-600" />,
     title: 'TIN সেবা',
     desc: 'ইলেক্ট্রনিক ট্যাক্স আইডেন্টিফিকেশন নম্বর রেজিস্ট্রেশন ও ডাউনলোড করুন',
-    color: 'bg-green-100 text-green-600',
+    color: 'bg-green-100',
   },
 ]
 
 const whyUs = [
   {
-    icon: '🛡️',
+    icon: <Zap size={24} className="text-violet-700" />,
     title: 'সরল ও দ্রুত প্রক্রিয়া',
     desc: 'আমাদের অনলাইন প্ল্যাটফর্ম ব্যবহার করে ঘরে বসেই আবেদন করুন',
   },
   {
-    icon: '🎧',
+    icon: <Headphones size={24} className="text-violet-700" />,
     title: '২৪/৭ গ্রাহক সেবা',
     desc: 'আমাদের দক্ষ সাপোর্ট টিম সর্বদা আপনার পাশে থেকে সেবা দিতে প্রস্তুত',
   },
   {
-    icon: '👍',
+    icon: <ShieldCheck size={24} className="text-violet-700" />,
     title: 'নির্ভরযোগ্য ও নিরাপদ',
     desc: 'আমাদের নিরাপদ প্ল্যাটফর্ম আপনার পরিচয়পত্র ও তথ্য সুরক্ষিত রাখে',
   },
   {
-    icon: '🏆',
-    title: 'TIN সেবা',
+    icon: <Trophy size={24} className="text-violet-700" />,
+    title: 'বিশ্বস্ত কর্মদল',
     desc: 'আমাদের বিশেষ টিন সেবা গ্রহণ করে অংশীদারদের সুবিধা উপভোগ করুন',
   },
 ]
