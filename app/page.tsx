@@ -5,12 +5,12 @@ import Image from 'next/image'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { categories } from '@/lib/services'
-import { Search, Loader2, IdCard, CreditCard, ClipboardList, FileText, ShieldCheck, Headphones, Zap, Trophy } from 'lucide-react'
+import { Search, Loader2,  CreditCard, ClipboardList, FileText, ShieldCheck, Headphones, Zap, Trophy } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 
 const coreServices = [
   {
-    icon: <IdCard size={24} className="text-blue-600" />,
+    icon: <span className="text-2xl">🪪</span>,
     title: 'NID সেবা',
     desc: 'ভোটার আইডি কার্ড তৈরি ও হারানো আইডি কার্ড ডাউনলোড করুন',
     color: 'bg-blue-100',
